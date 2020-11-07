@@ -12,14 +12,6 @@ const slider = tns({
     mouseDrag: true,
 });
 
-// document.querySelector('.prev').addEventListener('click', function () {
-//     slider.goTo('prev');
-// });
-// document.querySelector('.next').addEventListener('click', function () {
-//     slider.goTo('next');
-// });
-
-
 $(document).ready(function () {
     // Tabs
     $('ul.catalog__tabs').on('click', 'li:not(.catalog__tab_active)', function () {
@@ -97,8 +89,7 @@ $(document).ready(function () {
         }).done(function () {
             $(this).find("input").val("");
             $('#consultation, #order').fadeOut();
-            $('.overlay, #thanks').fadeIn()
-
+            $('.overlay, #thanks').fadeIn();
             $('form').trigger('reset');
         });
         return false;
